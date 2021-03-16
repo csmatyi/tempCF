@@ -1,0 +1,41 @@
+---
+title: "Using temp CF"
+date: March 13, 2021
+author: MC3
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+To load, call:
+```{r setup}
+library(tempCF)
+```
+
+There are two simple commands in this package. The first converts temperature in F to C:
+```{r f2c}
+F2C(100)
+```
+
+And C2F converts between Celsius and F:
+```{r c2f}
+C2F(0)
+```
+
+```{r, error=T}
+F2C('10x')
+```
+
+```{r multi}
+#tempo <- as.vector(read.table(system.file("extdata","tempo.txt",package="tempCF")))
+#F2C(tempo)
+```
